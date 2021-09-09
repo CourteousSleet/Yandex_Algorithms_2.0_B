@@ -30,5 +30,6 @@ int main() {
     output_file.close();
   } else cerr << "Unable to open output file" << endl;
 
+  delete[] students;
   return 0;
 }
