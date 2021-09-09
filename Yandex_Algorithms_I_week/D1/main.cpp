@@ -7,8 +7,8 @@ int main() {
   long long number_of_students = 0;
   long long *students = nullptr;
   long long result = 0;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> number_of_students;

@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.20)
 project(B2)
 
-set(CMAKE_CXX_STANDARD 20)
-
 add_executable(B2 main.cpp)
+
+install(TARGETS B2 RUNTIME DESTINATION bin)

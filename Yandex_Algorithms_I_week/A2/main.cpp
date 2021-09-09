@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
   auto next_symbol = -1ll, maximum = 0ll, num_of_elem = 0ll;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     while (next_symbol != 0) {

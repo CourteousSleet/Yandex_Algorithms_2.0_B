@@ -6,8 +6,8 @@ using namespace std;
 
 int main() {
   auto cathetus_length = 0, X_x = 0, X_y = 0;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> cathetus_length >> X_x >> X_y;

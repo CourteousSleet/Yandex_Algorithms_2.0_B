@@ -6,8 +6,8 @@ using namespace std;
 int main() {
   auto x = -1, y = -1, z = -1;
   auto result = 0;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> x >> y >> z;

@@ -10,8 +10,8 @@ int main() {
   unsigned buildings[MAX];
   map<unsigned, unsigned> distances;
   auto maximum = 0u;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     for (auto & building : buildings) {

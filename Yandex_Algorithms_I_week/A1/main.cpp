@@ -6,8 +6,8 @@ using namespace std;
 
 int main() {
   int finish_code = -1, interact_result = -1, checker_result = -1;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> finish_code >> interact_result >> checker_result;

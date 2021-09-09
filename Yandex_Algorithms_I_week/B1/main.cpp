@@ -7,8 +7,8 @@ using namespace std;
 int main() {
   auto number_of_stations = -1, entry_station = -1, exit_station = -1;
   auto result = -1;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> number_of_stations >> entry_station >> exit_station;

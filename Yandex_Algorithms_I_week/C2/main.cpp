@@ -7,8 +7,8 @@ using namespace std;
 int main() {
   string input_string;
   auto number_of_differs = 0u, i = 0u, j = 0u;
-  ifstream input_file("../input.txt");
-  ofstream output_file("../output.txt");
+  ifstream input_file("input.txt");
+  ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
     input_file >> input_string;
