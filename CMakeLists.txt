@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.20)
+project(Yandex_Algorithms_2.0_B)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_subdirectory(Yandex_Algorithms_I_week/A1)
+add_subdirectory(Yandex_Algorithms_I_week/A2)
+add_subdirectory(Yandex_Algorithms_I_week/B1)
+add_subdirectory(Yandex_Algorithms_I_week/B2)
+add_subdirectory(Yandex_Algorithms_I_week/C1)
+add_subdirectory(Yandex_Algorithms_I_week/C2)
+add_subdirectory(Yandex_Algorithms_I_week/D1)
+add_subdirectory(Yandex_Algorithms_I_week/D2)
+add_subdirectory(Yandex_Algorithms_I_week/E1)
+add_subdirectory(Yandex_Algorithms_I_week/E2)

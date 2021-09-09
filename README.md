@@ -1,0 +1,1 @@
+# Solutions for Yandex.Algorithms trainings 2.0
