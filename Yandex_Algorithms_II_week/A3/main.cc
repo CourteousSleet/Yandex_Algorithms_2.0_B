@@ -1,26 +1,28 @@
 #include <iostream>
 #include <fstream>
+#include <map>
 
 using namespace std;
 
 int main() {
-  auto next_symbol = -1ll, maximum = 0ll, num_of_elem = 0ll;
+  map<int, unsigned> numbers_and_amount;
+  auto result = 0u;
   ifstream input_file("input.txt");
   ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
-    while (next_symbol != 0) {
-      input_file >> next_symbol;
-      if (next_symbol > maximum) {
-        maximum = next_symbol;
-        num_of_elem = 1;
-      } else if (next_symbol == maximum) ++num_of_elem;
+    auto a = 0, b = 0;
+    while (input_file >> a >> b) {
+      ++numbers_and_amount[a];
+      ++numbers_and_amount[b];
     }
     input_file.close();
   } else cerr << "Unable to open input file" << endl;
 
+  for (auto &number: numbers_and_amount) if (number.second == 2) ++result;
+
   if (output_file.is_open()) {
-    output_file << num_of_elem;
+    output_file << result;
     output_file.close();
   } else cerr << "Unable to open output file" << endl;
 
