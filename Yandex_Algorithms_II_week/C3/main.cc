@@ -1,47 +1,30 @@
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <vector>
+#include <unordered_map>
 
 using namespace std;
 
 int main() {
-  int finish_code = -1, interact_result = -1, checker_result = -1;
+  vector<int> numbers;
+  unordered_map<int, int> numbers_appearances;
   ifstream input_file("input.txt");
   ofstream output_file("output.txt");
 
   if (input_file.is_open()) {
-    input_file >> finish_code >> interact_result >> checker_result;
+    auto num = 0;
+    while (input_file >> num) {
+      numbers.push_back(num);
+    }
     input_file.close();
   } else cerr << "Unable to open input file" << endl;
 
+  for (auto &num_v: numbers) {
+    ++numbers_appearances[num_v];
+  }
+
   if (output_file.is_open()) {
-    switch (interact_result) {
-      case 0:
-        if (finish_code != 0) output_file << 3;
-        else output_file << checker_result;
-        break;
-
-      case 1:
-        output_file << checker_result;
-        break;
-
-      case 4:
-        if (finish_code != 0) output_file << 3;
-        else output_file << 4;
-        break;
-
-      case 6:
-        output_file << 0;
-        break;
-
-      case 7:
-        output_file << 1;
-        break;
-
-      default:
-        output_file << interact_result;
-        break;
-    }
+    for (auto &number: numbers) if (numbers_appearances[number] == 1) output_file << number << ' ';
     output_file.close();
   } else cerr << "Unable to open output file" << endl;
 
