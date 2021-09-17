@@ -1,10 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <map>
 #include <string>
+#include <array>
 
 using namespace std;
 
 int main() {
+
   ifstream input_file("input.txt");
   ofstream output_file("output.txt");
 
